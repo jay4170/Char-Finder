@@ -1,6 +1,6 @@
 # Char Finder
 
-A
+A where's Wally clone
 
 ## Description
 
