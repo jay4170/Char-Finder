@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
-    <div>
+    <div className="grid grid-cols-2  bg-gray-200 text-center   w-full ">
       <Link to="/">Home</Link>
       <Link to="/leaderboard">Leaderboard</Link>
     </div>

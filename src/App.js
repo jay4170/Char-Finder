@@ -8,21 +8,25 @@ import {
   BrowserRouter,
   Routes,
 } from "react-router-dom";
-import Footer from "./Footer";
+import Footer from "./Constants/Footer";
 import GameBoard from "./GameBoard";
-import Header from "./Header";
+import Header from "./Constants/Header";
 import LeaderBoard from "./LeaderBoard";
+import Game from "./Game";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<GameBoard />} />
-        <Route path="/leaderboard" element={<LeaderBoard />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <div className="absolute w-full">
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Game />} />
+          <Route path="/leaderboard" element={<LeaderBoard />} />
+        </Routes>
+
+        <Footer />
+      </BrowserRouter>
+    </div>
   );
 }
 
