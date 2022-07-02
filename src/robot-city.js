@@ -8,7 +8,7 @@ const robotCity = () => {
     title: "Robot City",
     canvas: canvas,
     characters: [
-      { name: "Robo-Farnsworth", src: farnsworth, coords: [42, 32] },
+      { name: "Robo-Farnsworth", src: farnsworth, coords: [42, 22] },
       { name: "Robo-Lrr", src: lrr, coords: [74, 67] },
       { name: "Robo-Mojo-Jojo", src: mojojojo, coords: [23, 46] },
     ],

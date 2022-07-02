@@ -1,1 +1,21 @@
 https://www.artstation.com/chekavo
+
+
+mouse change to magnifying glass
+
+
+game Selector
+grab board data from firebase
+
+
+coords checker 
+
+if coordsClicked === coordsStored +- 10%
+        block out correct answer
+    else
+        warning message
+
+timer
+
+store data to leaderboard
+
