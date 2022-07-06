@@ -1,4 +1,5 @@
 import React from "react";
+//TODO:Tidy up redesign
 
 export default function Timer(props) {
   return (

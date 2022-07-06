@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Timer from "./Timer";
 
+//TODO:Tidy up redesign, need to figure out a way to stop this when the final char is clicked
+
+
 function StopWatch() {
   const [isActive, setIsActive] = useState(false);
   const [isPaused, setIsPaused] = useState(true);

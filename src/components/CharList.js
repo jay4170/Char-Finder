@@ -1,4 +1,5 @@
 import React from 'react'
+//TODO:Tidy up redesign, remove borders, highlight characters better
 
 export default function CharList(chars) {
   const charList = chars.map((char, i) => (

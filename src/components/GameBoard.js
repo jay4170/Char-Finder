@@ -4,6 +4,9 @@ import getStoredCoords from "../utils/getStoreCoords";
 import CharList from "./CharList";
 import StopWatch from "./StopWatch";
 
+//TODO:Fix title font
+
+
 export default function GameBoard(props) {
   const title = props.selectedGame.title;
   const canvas = props.selectedGame.canvas;

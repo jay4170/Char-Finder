@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore/lite";
+//TODO:hide values somehow
 
 const firebaseConfig = {
   apiKey: "AIzaSyDKieZL9TN762zVOKOc6S8gS9viXwZWuaA",

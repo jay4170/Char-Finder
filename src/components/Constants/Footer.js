@@ -1,4 +1,6 @@
 import React from "react";
+//TODO:Tidy up redesign
+
 
 const Footer = () => {
   return (

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Header(props) {
+  //TODO:Tidy up redesign
 
   return (
     <div className="grid grid-cols-2  bg-gray-200 text-center   w-full ">
