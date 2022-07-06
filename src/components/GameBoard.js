@@ -1,33 +1,17 @@
-import { collection, getDocs } from "firebase/firestore/lite";
 import React, { useState } from "react";
 import db from "../utils/config";
+import getStoredCoords from "../utils/getStoreCoords";
+import CharList from "./CharList";
 import StopWatch from "./StopWatch";
 
 export default function GameBoard(props) {
   const title = props.selectedGame.title;
   const canvas = props.selectedGame.canvas;
   const gameNo = props.selectedGame.gameNo;
-
   const [chars, setChars] = useState(props.selectedGame.characters);
   const winningCoords = getStoredCoords(db, gameNo);
 
-  async function getStoredCoords(db, gameNo) {
-    let charAndCoords = [];
-    //query data base, based on the gameNo selected
-    const col = collection(db, "coords");
-    const snapshot = await getDocs(col);
-    const coordList = snapshot.docs[gameNo].data();
-
-    //turn the data into an array of objects {name:dave,coords:[1,2]}
-    charAndCoords = Object.keys(coordList).map((key) => {
-      const char = { name: key, coords: coordList[key] };
-      return char;
-    });
-
-    //return the array
-
-    return charAndCoords;
-  }
+  
 
   const coordsHandler = (e) => {
     const clickedX = Math.round(
@@ -61,21 +45,10 @@ export default function GameBoard(props) {
         element.found = true;
       }
     });
-
     setChars(tempChars);
   };
 
-  const charList = chars.map((char, i) => (
-    <div
-      key={i}
-      className={`w-full grid ${
-        char.found && "grayscale"
-      } justify-items-center m-2 border text-center p-2`}
-    >
-      <img className="h-20 md:h-32 xl:64" alt="" src={char.src} />
-      <h1 className={char.found ? `line-through` : undefined}>{char.name}</h1>
-    </div>
-  ));
+  
 
   return (
     <div
@@ -84,7 +57,7 @@ export default function GameBoard(props) {
     >
       <StopWatch />
       <div className="grid w-full w-max-32 grid-flow-col justify-evenly">
-        {charList}
+        {CharList(chars)}
       </div>
       <div className=" grid text-center">
         <h1>{title}</h1>

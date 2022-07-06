@@ -9,7 +9,6 @@ function StopWatch() {
  useEffect(() => {
    handleStart();
  });
-
   useEffect(() => {
     let interval = null;
 
