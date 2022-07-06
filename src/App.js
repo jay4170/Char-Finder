@@ -1,20 +1,16 @@
-import React from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams,
-  BrowserRouter,
-  Routes,
-} from "react-router-dom";
+import React, { useState } from "react";
+import { Route, BrowserRouter, Routes } from "react-router-dom";
 import Footer from "./Constants/Footer";
-import GameBoard from "./GameBoard";
 import Header from "./Constants/Header";
 import LeaderBoard from "./LeaderBoard";
 import Game from "./Game";
+import { serverTimestamp, Timestamp } from "firebase/firestore/lite";
+
+
 
 function App() {
+  const [time,setTime] = useState(new Timestamp())
+  console.log(time);
   return (
     <div className="absolute w-full">
       <BrowserRouter>

@@ -8,14 +8,12 @@ game Selector
 grab board data from firebase
 
 
-coords checker 
 
-if coordsClicked === coordsStored +- 10%
-        block out correct answer
-    else
-        warning message
 
 timer
 
 store data to leaderboard
 
+get data from database
+turn data into readable format
+return data

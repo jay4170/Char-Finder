@@ -6,16 +6,16 @@ import mojojojo from "./images/robot-city/Characters/mojojojo.jpg";
 const robotCity = () => {
   return {
     title: "Robot City",
+    gameNo: 0,
     canvas: canvas,
     characters: [
       {
         name: "Robo-Farnsworth",
         src: farnsworth,
         found: false,
-        coords: [42, 22],
       },
-      { name: "Robo-Lrr", src: lrr, found: false, coords: [74, 67] },
-      { name: "Robo-Mojo-Jojo", src: mojojojo, found: false, coords: [23, 46] },
+      { name: "Robo-Lrr", src: lrr, found: false,  },
+      { name: "Robo-Mojo-Jojo", src: mojojojo, found: false,  },
     ],
   };
 };
