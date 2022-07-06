@@ -1,6 +1,7 @@
 import { collection, getDocs } from "firebase/firestore/lite";
 import React, { useState } from "react";
-import db from "./config";
+import db from "../utils/config";
+import StopWatch from "./StopWatch";
 
 export default function GameBoard(props) {
   const title = props.selectedGame.title;
@@ -81,6 +82,7 @@ export default function GameBoard(props) {
       className="grid grid-cols-1 justify-items-center	"
       onClick={coordsHandler}
     >
+      <StopWatch />
       <div className="grid w-full w-max-32 grid-flow-col justify-evenly">
         {charList}
       </div>
